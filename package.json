@@ -1,0 +1,38 @@
+{
+  "name": "stringscan",
+  "version": "0.1.0",
+  "description": "StringScanner like utility for JS, allowing strings to be parsed piece by piece",
+  "main": "src/stringscan.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "jsdoc-to-markdown": "^5.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "readme": "jsdoc2md -t README.hbs src/*.js > README.md; echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watzon/stringscan.js.git"
+  },
+  "keywords": [
+    "string",
+    "scanner",
+    "parser",
+    "StringScanner",
+    "ruby",
+    "crystal",
+    "utility"
+  ],
+  "author": "Chris Watson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watzon/stringscan.js/issues"
+  },
+  "homepage": "https://github.com/watzon/stringscan.js#readme"
+}
