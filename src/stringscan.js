@@ -12,6 +12,7 @@ module.exports = StringScanner
  * @class
  * @memberof module:stringscan
  * @typicalname scanner
+ * @see https://github.com/watzon/stringscan.js/tree/master/examples
  */
 class StringScanner {
   constructor (str) {
@@ -40,6 +41,8 @@ class StringScanner {
 
   /**
    * Returns the current scan offset.
+   * 
+   * @returns {number}
    */
   get offset () {
     return this._offset
@@ -47,6 +50,8 @@ class StringScanner {
 
   /**
    * Returns the remainder of the string after the scan offset.
+   * 
+   * @returns {string}
    */
   get rest () {
     return this.str.slice(this._offset, this.str.length)

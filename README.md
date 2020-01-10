@@ -12,17 +12,44 @@
 
 JavaScript implementation of Ruby/Crystal's StringScanner. Useful for writing tokenizers.
 
+## Examples
 
-# API Reference
+```javascript
+const StringScanner = require('stringscan')
+const s = new StringScanner('This is an example string')
+
+s.scan(/\w+/) // "This"
+s.scan(/\w+/) // null
+s.scan(/\s+/) // " "
+s.scan(/\s+/) // null
+s.scan(/\w+/) // "is"
+s.eos()       // false
+
+s.scan(/\s+/) // " "
+s.scan(/\w+/) // "an"
+s.scan(/\s+/) // " "
+s.scan(/\w+/) // "example"
+s.scan(/\s+/) // " "
+s.scan(/\w+/) // "string"
+s.eos()       // true
+
+s.scan(/\s+/) // null
+s.scan(/\w+/) // null
+```
+
+For more examples see the [examples](https://github.com/watzon/stringscan.js/tree/master/examples) directory.
+
+## API Reference
 <a name="module_stringscan.StringScanner"></a>
 
 ### stringscan~StringScanner
 **Kind**: inner class of [<code>stringscan</code>](#module_stringscan)  
+**See**: https://github.com/watzon/stringscan.js/tree/master/examples  
 
 * [~StringScanner](#module_stringscan.StringScanner)
     * [.offset](#module_stringscan.StringScanner+offset) ⇒ <code>number</code>
-    * [.offset](#module_stringscan.StringScanner+offset)
-    * [.rest](#module_stringscan.StringScanner+rest)
+    * [.offset](#module_stringscan.StringScanner+offset) ⇒ <code>number</code>
+    * [.rest](#module_stringscan.StringScanner+rest) ⇒ <code>string</code>
     * [.scan(pattern)](#module_stringscan.StringScanner+scan) ⇒ <code>string</code> \| <code>null</code>
     * [.scanUntil(pattern)](#module_stringscan.StringScanner+scanUntil) ⇒ <code>string</code> \| <code>null</code>
     * [.skip(pattern)](#module_stringscan.StringScanner+skip) ⇒ <code>number</code> \| <code>null</code>
@@ -51,13 +78,13 @@ of the given string.
 
 <a name="module_stringscan.StringScanner+offset"></a>
 
-#### scanner.offset
+#### scanner.offset ⇒ <code>number</code>
 Returns the current scan offset.
 
 **Kind**: instance property of [<code>StringScanner</code>](#module_stringscan.StringScanner)  
 <a name="module_stringscan.StringScanner+rest"></a>
 
-#### scanner.rest
+#### scanner.rest ⇒ <code>string</code>
 Returns the remainder of the string after the scan offset.
 
 **Kind**: instance property of [<code>StringScanner</code>](#module_stringscan.StringScanner)  
