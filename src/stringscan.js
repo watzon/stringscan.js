@@ -4,11 +4,6 @@
 // https://opensource.org/licenses/MIT
 
 /**
- * @module
- */
-module.exports = StringScanner
-
-/**
  * @class
  * @memberof module:stringscan
  * @typicalname scanner
@@ -222,3 +217,8 @@ class StringScanner {
     return null
   }
 }
+
+/**
+ * @module
+ */
+module.exports = StringScanner
