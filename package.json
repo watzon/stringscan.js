@@ -1,6 +1,6 @@
 {
   "name": "stringscan",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "StringScanner like utility for JS, allowing strings to be parsed piece by piece",
   "main": "index.js",
   "directories": {
